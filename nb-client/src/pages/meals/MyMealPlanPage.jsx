@@ -17,8 +17,8 @@ const GROUPS = [
 
 // ─── Single meal card ────────────────────────────────────────────
 function MealCard({ meal, color, onDelete }) {
-  const imgSrc = meal.image
-    ? (meal.image.startsWith('http') ? meal.image : `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:8080'}/${meal.image}`)
+  const imgSrc = meal?.image
+    ? (meal.image.startsWith('http') ? meal.image : `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://nutribot-fw8p.onrender.com'}/${meal.image}`)
     : null
 
   return (
